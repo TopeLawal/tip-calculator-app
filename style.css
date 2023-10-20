@@ -50,6 +50,10 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
+img {
+   margin: 2rem; 
+}
+
 .tip-grid {
     max-width: 60%;
     background-color: var(--White);
@@ -108,7 +112,7 @@ input[type="number"] {
 
 .icon-dollar {
     position: absolute;
-    top: 25%;
+    top: 4%;
     left: 5%;
     transform: translate(-50%);
 }
@@ -119,7 +123,7 @@ input[type="number"] {
 
 .icon-person {
     position: absolute;
-    top: 25%;
+    top: 4%;
     left: 5%;
     transform: translate(-50%);
 }
@@ -148,7 +152,6 @@ input[type="number"] {
     font-family: monospace;
     font-size: 2.4rem;
     font-weight: 700;
-    cursor: pointer;
 }
 
 .select-tip .custom-tip::placeholder {
