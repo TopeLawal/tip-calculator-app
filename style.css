@@ -87,7 +87,7 @@ img {
     background-color: var(--Very-light-grayish-cyan);
     color: var(--Very-dark-cyan);
     text-align: right;
-    font-family: monospace;
+    font-family: 'Space Mono';
     font-size: 2.4rem;
     font-weight: 700;
 }
@@ -98,7 +98,7 @@ img {
 }
 
 .left input[type="number"]:not(.custom-tip)::placeholder {
-    font-family: monospace;
+    font-family: 'Space Mono';
     font-size: 2rem;
     color: var(--Light-grayish-cyan);
     font-weight: 700;
@@ -149,14 +149,14 @@ img {
     background-color: var(--Very-light-grayish-cyan);
     color: var(--Very-dark-cyan);
     text-align: right;
-    font-family: monospace;
+    font-family: 'Space Mono';
     font-size: 2.4rem;
     font-weight: 700;
 }
 
 .select-tip .custom-tip::placeholder {
     text-align: center;
-    font-family: monospace;
+    font-family: 'Space Mono';
     font-size: 1.8rem;
     font-weight: 700;
 }
@@ -183,7 +183,6 @@ img {
     color: var(--Very-dark-cyan);
 }
 
-
 .select-tip label:hover {
     background-color: var(--Light-grayish-cyan);
     color: var(--Very-dark-cyan);
@@ -198,8 +197,16 @@ img {
 
 #error-text {
     color: red;
+    display: none;
 }
 
+#error-text.show {
+    display: block;
+}
+
+#people.show-error {
+    outline: 1px solid red;
+}
 
 .right {
     width: 50%;
@@ -220,7 +227,12 @@ img {
 .right .result {
     display: grid;
     grid-template-columns: 5fr 1fr;
-    gap: 3rem;
+    gap: 4rem;
+}
+
+.result .tip-amount h2,
+.result .total h2 {
+    font-size: 1.8rem;
 }
 
 .right .result span {
@@ -230,7 +242,8 @@ img {
 
 .right .result .value {
     color: var(--Strong-cyan);
-    font-size: 2rem;
+    font-size: 1.8rem;
+    text-align: right;
 }
 
 .right .reset-btn {
@@ -252,4 +265,27 @@ img {
 .right .reset-btn:hover {
     background-color: var(--Strong-cyan);
     color: var(--Very-dark-cyan);
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 765px) {
+
+    body {
+        height: 100%;
+    }
+    .tip-grid {
+        flex-direction: column;
+        max-width: 100%;
+        align-items: center;
+    }
+    
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .right .reset-btn {
+        margin-top: 2rem;
+    }
 }
